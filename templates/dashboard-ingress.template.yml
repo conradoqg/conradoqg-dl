@@ -5,7 +5,7 @@ metadata:
   namespace: kubernetes-dashboard
 spec:
   rules:
-    - host: dashboard.rocketboost.me
+    - host: dashboard.conrado.dev
       http:
         paths:
         - path: /
