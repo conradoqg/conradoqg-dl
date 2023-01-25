@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: nginx-controller
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      name: nginx-ingress-microk8s
+  namespaceSelector:
+    matchNames:
+    - ingress
+  podMetricsEndpoints:
+  - port: metrics

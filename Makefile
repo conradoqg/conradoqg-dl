@@ -18,7 +18,7 @@ clean:
 
 .PHONY: install
 install:
-	kubectl apply -f $(spec_dir)/$(spec)
+	microk8s kubectl apply -f $(spec_dir)/$(spec)
 
 .PHONY: token
 token:

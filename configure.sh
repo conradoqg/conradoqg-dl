@@ -6,10 +6,10 @@ if [[ $UID != 0 ]]; then
     exit 1
 fi
 
-snap install microk8s --classic --channel=1.18/stable
+snap install microk8s --classic --channel=1.19/stable
 
 microk8s status --wait-ready
 
-microk8s enable dns storage ingress metrics-server
+microk8s enable dns storage ingress metrics-server promtheus
 
 microk8s kubectl apply -f ./configure/kubernetes-dashboard-all.yml
